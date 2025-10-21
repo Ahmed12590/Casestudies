@@ -61,6 +61,130 @@
   /* 24px */
 }
 
+/* -------------------------------------------------main banner---------------------------------------------- */
+
+.hero-banner {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+
+  /* 🖼️ Background Image + Gradient Blend */
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../../img/main-back.jpg") center center/cover no-repeat;
+  background-attachment: fixed;
+}
+
+/* ✨ Optional animated gradient overlay (subtle movement) */
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.2), rgba(147, 51, 234, 0.2), rgba(236, 72, 153, 0.2));
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+  z-index: 1;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 🧠 Content Styling */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero-content h1 span {
+  background: linear-gradient(90deg, #facc15, #f97316, #ef4444);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+/* 🧩 Buttons */
+.hero-btns {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--egg-white);
+}
+
+.btn-primary:hover {
+  background: var(--egg-white);
+  color:var(--black);
+}
+
+.btn-secondary {
+  color: #ffffff;
+  background-color: var(--black);
+}
+
+.btn-secondary:hover {
+  background: #fff;
+  color: var(--primary);
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+  }
+}
+
+
+
 /* -----------------------------------------------service ---------------------------------------------------- */
 
 
