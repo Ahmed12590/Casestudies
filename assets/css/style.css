@@ -61,6 +61,99 @@
   /* 24px */
 }
 
+/* -----------------------------------------------service ---------------------------------------------------- */
+
+
+.service-wrapper {
+  background-image: url("../../img/service-logo.webp");
+  background-repeat: no-repeat;
+  background-position: center top;
+  padding: 60px 9%;
+  text-align: center;
+  color: #fff;
+  margin-top: 200px;
+
+}
+
+
+
+.service-grid {
+  padding: 80px 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* 🔴 Service Card */
+.service-card {
+  background-color: var(--secondary);
+  border-radius: 15px;
+  height: 350px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.service-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: left;
+  padding: 25px;
+}
+
+.service-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-content p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  opacity: 0.95;
+}
+
+.btn-read {
+  display: inline-block;
+  background: #fff;
+  color: #d90429;
+  padding: 10px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-read:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* 🌐 Responsive Layout */
+@media (max-width: 992px) {
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    height: 300px;
+  }
+}
+
+
 /*-------------------------------------------------hero--------------------------------------------------------*/
 
 .customer-reviews {
@@ -531,6 +624,114 @@ svg.svg-convert.svg-converted {
   margin-left: 2rem;
 }
 
+/* -------------------------------------------------footer css ---------------------------------------------------------- */
+
+.main-footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 100px 60px 100px 60px;
+  background-color: var(--primary-light);
+}
+
+.footer-about h4 {
+  font-size: 30px;
+}
+
+.footer-about p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.quick-links h4 {
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+
+.footer-quick-link li {
+  list-style: none;
+  font-size: 20px;
+}
+
+.footer-quick-link li:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-social h4 {
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 5px;
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-social i {
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-social i:hover {
+  color: rgb(255, 255, 255);
+}
+
+
+.footer-contact h4 {
+  font-size: 30px;
+}
+
+.footer-contact p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.footer-contact i {
+  font-size: 20px;
+  color: var(--primary);
+}
+
+.footer-bottom {
+  width: 100%;
+  margin: 0;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  color: rgb(0, 0, 0);
+  background-color: var(--primary);
+}
+
+.footer-bottom p {
+  font-size: 16px;
+  margin: 0;
+  color: var(--egg-white);
+}
+
+.footer-bottom p a {
+  text-decoration: none;
+  color: #A88BEB;
+}
+
+
+/* ------------------------------------------------------- footer end ---------------------------------------------------- */
+
+
+
 @media (max-width: 1440px) {
   html {
     font-size: 14px;
@@ -766,6 +967,24 @@ svg.svg-convert.svg-converted {
 
   .faq-box-inner {
     padding: 2rem 1rem;
+  }
+
+  .main-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 30px 20px;
+  }
+
+  .footer-contact p {
+    justify-content: center;
+  }
+
+  .footer-social {
+
+    justify-content: center;
+    gap: 20px;
   }
 }
 

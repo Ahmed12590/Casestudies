@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="./assets/css/common.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
+    <title>Contact us </title>
+</head>
+
+<body>
+    <div class="flair"></div>
+    <header class="portfolio-header">
+        <div class="header-wrapper">
+            <nav class="main-header">
+                <ul class="d-flex align-items-center justify-content-center gap-4">
+                    <li class="nav-link">
+                        <a href="/index.html">
+                            <img src="./img/logo.png" alt="site logo" class="site-logo" />
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="/index.html"> Home </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#"> Services </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#"> Portfolio </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="/About.html"> About </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#"> Blogs </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="/Contact.html"> Contact </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <button class="btn-bbGlobal">Get Started</button>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="mobile-header">
+        <nav class="mobile-nav">
+            <ul class="d-flex align-items-center justify-content-between">
+                <li class="nav-link">
+                    <a href="/index.html">
+                        <img src="./img/logo.png" alt="site logo" class="site-logo" />
+                    </a>
+                </li>
+
+                <li class="nav-link hamburger">
+                    <div class="button">
+                        <svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <line x1="0" y1="17" x2="48" y2="17" stroke-width="1" />
+                                <line x1="0" y1="31" x2="48" y2="31" stroke-width="1" />
+                            </g>
+
+                            <g>
+                                <line x1="0" y1="24" x2="48" y2="24" stroke-width="1" />
+                                <line x1="0" y1="24" x2="48" y2="24" stroke-width="1" />
+                            </g>
+                        </svg>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <nav class="mob-inner d-flex flex-direction align-items-center justify-content-start gap-5">
+            <ul>
+                <li class="nav-link">
+                    <a href="/index.html"> Home </a>
+                </li>
+
+                <li class="nav-link">
+                    <a href="#"> Services </a>
+                </li>
+
+                <li class="nav-link">
+                    <a href="#"> Portfolio </a>
+                </li>
+
+                <li class="nav-link">
+                    <a href="/About.html"> About </a>
+                </li>
+
+                <li class="nav-link">
+                    <a href="#"> Blogs </a>
+                </li>
+
+                <li class="nav-link">
+                    <a href="/Contact.html"> Contact </a>
+                </li>
+
+                <li class="nav-link">
+                    <a href="#">
+                        <button class="btn-bbGlobal">Get Started</button>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <footer class="main-footer">
+            <div class="footer-about">
+                <h4>About Us</h4>
+                <p>Lorem ipsum dolor sit amet, con sectetuer <br> adipiscing elit. Donec odio. Quisque volutpat
+                    <br>mattis
+                    eros.ullam
+                </p>
+            </div>
+            <div class="quick-links">
+                <h4>Quicks Links</h4>
+                <div class="footer-quick-link">
+                    <ul>
+                        <li>Home</li>
+                        <li>About us </li>
+                        <li>Books</li>
+                        <li>Contact us</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-social">
+                <h4>Social Links</h4>
+                <div class="footer-social-icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-tiktok"></i>
+                </div>
+            </div>
+
+
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><i class="fa-solid fa-envelope"></i> email@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> +23 3213 500</p>
+                <p><i class="fa-solid fa-location-dot"></i></i> House no 42 PECH karachi</p>
+            </div>
+        </footer>
+        <div class="footer-bottom">
+            <p>Developed by <a href="https://theahmedportfolio.vercel.app/">Ahmed</a> </p>
+            <p>Copyright <span id="year"></span></p>
+        </div>
+    </main>
+
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <script>
+        const year = new Date().getFullYear();
+        document.getElementById("year").textContent = year;
+    </script>
+
+    <script src="./ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.4/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="./ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="./ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
+    <script src="./assets/js/vendors/cursor.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+    <script src="./assets/js/common.js"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
