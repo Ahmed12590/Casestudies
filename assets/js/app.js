@@ -191,3 +191,12 @@ $(document).ready(() => {
     });
   });
 });
+
+
+// 🛑 Stop only unwanted redirect, not animations
+const redirectBlocker = setInterval(() => {
+  if (window.location.href.includes("digitalgravity.ae")) {
+    clearInterval(redirectBlocker);
+    window.stop();
+  }
+}, 500);

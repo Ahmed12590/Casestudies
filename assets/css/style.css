@@ -8,6 +8,7 @@
   /* 0 0 70px 70px */
 }
 
+
 .portfolio-hero {
   margin: 0 1rem;
   /* 16px */
@@ -130,6 +131,7 @@
 .fall-box.-v8 span {
   background: #ffea9f;
 }
+
 
 .hero-txt-h1 {
   font-family: bbGlobal Sans SemiBold, sans-serif;
@@ -263,6 +265,8 @@
 }
 
 /*-------------------------------------------------case-studies--------------------------------------------------------*/
+
+
 
 .case-studies {
   max-width: 100%;
@@ -544,5 +548,260 @@ svg.svg-convert.svg-converted {
 
   .mobile-header {
     display: block;
+  }
+}
+
+
+
+/* 🌐 RESPONSIVE DESIGN UPDATES */
+
+/* ---------- Tablets (max-width: 992px) ---------- */
+@media (max-width: 992px) {
+  html {
+    font-size: 12px;
+  }
+
+  .portfolio-hero,
+  .portfolio-punch {
+    font-size: 4rem;
+    line-height: 5rem;
+    height: auto;
+    padding: 4rem 1rem;
+  }
+
+  .hero-txt-h1 {
+    font-size: 4rem;
+  }
+
+  .customer-reviews {
+    height: auto;
+    padding: 4rem 1rem;
+  }
+
+  .clients-slider {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .client-logo img {
+    width: 9rem;
+  }
+
+  .case-studies .grid-layout {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 0;
+    padding: 2rem 0;
+  }
+
+  .case-studies__card-wrapper {
+    padding: 0;
+  }
+
+  .cta-txt-wrapper {
+    padding: 10rem 2rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .faq-head-txt {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+
+  .faq-box-inner {
+    padding: 2rem;
+  }
+
+  .faq-head {
+    font-size: 1.75rem;
+  }
+
+  .faq-body {
+    font-size: 1.25rem;
+  }
+}
+
+/* ---------- Mobile (max-width: 768px) ---------- */
+@media (max-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+
+  /* Hero Section */
+  .portfolio-hero,
+  .portfolio-punch {
+    font-size: 3rem;
+    line-height: 4rem;
+    padding: 3rem 1rem;
+  }
+
+  .hero-txt-h1 {
+    font-size: 3rem;
+  }
+
+  .hero-txt-p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  /* Customer Reviews */
+  .customer-reviews {
+    padding: 3rem 1rem;
+    height: auto;
+    border-radius: 0 0 2rem 2rem;
+  }
+
+  .trust-wrapper {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .clients-slider {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .client-logo img {
+    width: 8rem;
+  }
+
+  .fall-box-wrapper {
+    flex-wrap: wrap;
+    bottom: 0;
+  }
+
+  .fall-box span {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  /* Tabs */
+  .tab-wrapper {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .btn-tabs {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .tab-head {
+    font-size: 3rem;
+    padding: 3rem 0;
+  }
+
+  /* Case Studies (1 by 1 grid) */
+  .case-studies .grid-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+
+  .case-studies__card-wrapper {
+    margin-bottom: 3rem;
+    padding: 0;
+  }
+
+  .case-studies__card-wrapper:nth-child(even) {
+    margin-top: 0;
+  }
+
+  .case-studies__card-wrapper--card-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .arrow-anchor span {
+    font-size: 1rem;
+  }
+
+  .arrow-anchor .img-wrapper {
+    width: 2.5em;
+    height: 2.5em;
+  }
+
+  /* Testimonials */
+  .tes-txt-wrapper {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 2rem;
+  }
+
+  .tes-txt-wrapper img {
+    width: 7rem;
+    margin-bottom: 1rem;
+  }
+
+  /* CTA */
+  .cta-txt-wrapper {
+    padding: 8rem 2rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cta-head-txt {
+    font-size: 2.5rem;
+  }
+
+  .cta-long-txt {
+    font-size: 1.2rem;
+  }
+
+  /* FAQ */
+  .faq-head-txt {
+    font-size: 3rem;
+  }
+
+  .faq-head {
+    font-size: 1.5rem;
+  }
+
+  .faq-body {
+    font-size: 1.1rem;
+    margin-left: 0;
+  }
+
+  .faq-box-inner {
+    padding: 2rem 1rem;
+  }
+}
+
+/* ---------- Small Mobile (max-width: 480px) ---------- */
+@media (max-width: 480px) {
+  html {
+    font-size: 9px;
+  }
+
+  .portfolio-hero,
+  .portfolio-punch {
+    font-size: 2.2rem;
+    line-height: 3rem;
+  }
+
+  .hero-txt-p {
+    font-size: 1rem;
+  }
+
+  .case-studies .grid-layout {
+    gap: 1.5rem;
+  }
+
+  .arrow-anchor span {
+    font-size: 0.9rem;
+  }
+
+  .cta-head-txt {
+    font-size: 2rem;
+  }
+
+  .cta-long-txt {
+    font-size: 1rem;
+  }
+
+  .faq-head-txt {
+    font-size: 2.5rem;
   }
 }
