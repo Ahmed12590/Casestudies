@@ -1,4 +1,55 @@
+/* 💥 Fixed Offer Badge */
+.offer-badge {
+  position: fixed;
+  top: 50%;
+  right: -110px;
+  transform: translateY(-50%) rotate(-90deg);
+  background: var(--btn-dark);
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  z-index: 2000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  animation: subtlePulse 3s ease-in-out infinite;
+}
+
+@keyframes subtlePulse {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+
+  100% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+}
+
+
+.offer-badge:hover {
+  right: -90px;
+  background: var(--primary);
+}
+
+/* 📱 Hide on Mobile & Tablets */
+@media (max-width: 1024px) {
+  .offer-badge {
+    display: none;
+  }
+}
+
+
+
+
 /*-------------------------------------------------intor--------------------------------------------------------*/
+
 
 .intro {
   margin-bottom: 5rem;
@@ -213,8 +264,10 @@
 
 /* 🔴 Service Card */
 .service-card {
-  background-color: var(--secondary);
+  background-color: var(--egg-white);
   border-radius: 15px;
+  border: solid;
+  border-color: var(--primary);
   height: 350px;
   display: flex;
   align-items: flex-end;
@@ -231,9 +284,13 @@
 .service-content {
   position: relative;
   z-index: 2;
-  color: #fff;
+  color: #000000;
   text-align: left;
   padding: 25px;
+}
+
+.service-content img {
+  width: 100px;
 }
 
 .service-content h3 {
@@ -644,6 +701,7 @@ svg.svg-convert.svg-converted {
   overflow: hidden;
   padding: 5rem 0;
   margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .cta-inner {
@@ -862,6 +920,7 @@ svg.svg-convert.svg-converted {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  ;
 }
 
 /* Dark overlay */
