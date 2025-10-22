@@ -6,105 +6,156 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
-    <link rel="stylesheet" href="./assets/css/bootstrap.css" />
-    <link rel="stylesheet" href="./assets/css/common.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="img/logo.png">
-    <title>Our Blogs </title>
-
+    <link rel="icon" type="image/x-icon" href="../img/logo.png">
+    <title>first blog </title>
     <style>
-        .blog-section {
-            padding: 80px 9%;
+        .blog-inner {
+            padding: 200px 9%;
             background-color: var(--egg-white);
+            color: var(--black);
+            line-height: 1.7;
+        }
+
+        .blog-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .blog-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--black);
+        }
+
+        .blog-meta {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .blog-meta span {
+            margin: 0 6px;
+        }
+
+        .blog-featured img {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+
+        .blog-content h2 {
+            font-size: 1.5rem;
+            margin: 30px 0 10px;
+            color: var(--primary);
+        }
+
+        .blog-content p {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .blog-content ul {
+            margin: 10px 0 20px 30px;
+            list-style-type: disc;
+        }
+
+        blockquote {
+            margin: 30px 0;
+            padding: 20px;
+            border-left: 5px solid var(--primary);
+            background: #f8f8f8;
+            font-style: italic;
+            color: #555;
+            border-radius: 5px;
+        }
+
+        .share-section {
+            margin-top: 50px;
             text-align: center;
         }
 
-        .blog-heading {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--black);
-            margin-bottom: 50px;
-            position: relative;
+        .share-icons a {
+            margin: 0 10px;
+            font-size: 1.2rem;
+            color: var(--primary);
+            transition: 0.3s;
         }
 
-        /* 🧱 Blog Grid Layout */
-        .blog-grid {
+        .share-icons a:hover {
+            color: #000;
+        }
+
+        /* 🧩 Related Posts */
+        .related-posts {
+            padding: 80px 9%;
+            background: #fff;
+            text-align: center;
+        }
+
+        .related-posts h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: var(--black);
+        }
+
+        .related-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 30px;
-            justify-content: center;
         }
 
-        /* 📦 Blog Card */
-        .blog-card {
-            background: #fff;
+        .related-card {
+            background: var(--egg-white);
             border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .blog-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
-        }
-
-        /* 🖼️ Image */
-        .blog-image img {
+        .related-card img {
             width: 100%;
-            height: 220px;
+            height: 200px;
             object-fit: cover;
         }
 
-        /* ✍️ Content */
-        .blog-content {
-            padding: 20px;
-            text-align: left;
-        }
-
-        .blog-title {
-            font-size: 1.2rem;
-            font-weight: 700;
+        .related-card h3 {
+            font-size: 1.1rem;
+            margin: 15px 0 10px;
             color: var(--black);
-            margin-bottom: 10px;
         }
 
-        .blog-excerpt {
-            font-size: 0.95rem;
-            color: #555;
+        .related-card a {
+            display: inline-block;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
             margin-bottom: 15px;
         }
 
-        /* 🔗 Button */
-        .btn-readmore {
-            display: inline-block;
-            background: var(--primary);
-            color: #fff;
-            padding: 8px 16px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .btn-readmore:hover {
-            background: var(--black);
-            color: var(--egg-white);
-            transform: translateY(-2px);
+        .related-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
         }
 
         /* 📱 Responsive */
         @media (max-width: 992px) {
-            .blog-grid {
+            .related-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
 
         @media (max-width: 768px) {
-            .blog-grid {
+            .related-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .blog-title {
+                font-size: 1.8rem;
             }
         }
     </style>
@@ -122,7 +173,7 @@
                 <ul class="d-flex align-items-center justify-content-center gap-4">
                     <li class="nav-link">
                         <a href="/index.html">
-                            <img src="./img/logo.png" alt="site logo" class="site-logo" />
+                            <img src="../img/logo.png" alt="site logo" class="site-logo" />
                         </a>
                     </li>
 
@@ -165,7 +216,7 @@
             <ul class="d-flex align-items-center justify-content-between">
                 <li class="nav-link">
                     <a href="/index.html">
-                        <img src="./img/logo.png" alt="site logo" class="site-logo" />
+                        <img src="../img/logo.png" alt="site logo" class="site-logo" />
                     </a>
                 </li>
 
@@ -224,131 +275,103 @@
     </header>
     <main>
 
+        <section class="blog-inner">
+            <div class="container">
 
-        <section class="about-banner">
-            <div class="about-overlay"></div>
-            <div class="about-content">
-                <h1>Our <span>Blogs</span></h1>
-            </div>
-        </section>
-
-
-        <section class="blog-section">
-            <h2 class="blog-heading">Our Latest Blogs</h2>
-
-            <div class="blog-grid">
-
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <img src="img/about-page.jpg" alt="Blog 1">
-                    </div>
-                    <div class="blog-content">
-                        <h3 class="blog-title">How to Build a Responsive Website</h3>
-                        <p class="blog-excerpt">Learn the essentials of creating a mobile-friendly and fast-loading
-                            website.</p>
-                        <a href="/blog-inner/first.html" class="btn-readmore">Read More →</a>
+                <!-- 📰 Blog Header -->
+                <div class="blog-header">
+                    <h1 class="blog-title">How to Build a Responsive Website in 2025</h1>
+                    <div class="blog-meta">
+                        <span>By <strong>Ahmed</strong></span>
+                        <span>•</span>
+                        <span>October 21, 2025</span>
+                        <span>•</span>
+                        <span>Web Design</span>
                     </div>
                 </div>
 
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <img src="img/misssion.jpg" alt="Blog 2">
-                    </div>
-                    <div class="blog-content">
-                        <h3 class="blog-title">Top 5 SEO Strategies for 2025</h3>
-                        <p class="blog-excerpt">Boost your website ranking with the latest SEO techniques and trends.
-                        </p>
-                        <a href="/blog-inner/first.html" class="btn-readmore">Read More →</a>
-                    </div>
+                <!-- 🖼️ Featured Image -->
+                <div class="blog-featured">
+                    <img src="/img/misssion.jpg" alt="Responsive Website Blog" />
                 </div>
 
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <img src="img/about-page.jpg" alt="Blog 3">
-                    </div>
-                    <div class="blog-content">
-                        <h3 class="blog-title">Why Businesses Need Custom Software</h3>
-                        <p class="blog-excerpt">Discover how custom solutions streamline your operations and growth.</p>
-                        <a href="/blog-inner/first.html" class="btn-readmore">Read More →</a>
-                    </div>
+                <!-- 📄 Blog Content -->
+                <div class="blog-content">
+                    <p>
+                        In today’s digital world, having a responsive website is not just an option —
+                        it’s a necessity. A responsive design ensures that your website looks
+                        and performs perfectly across all devices, from desktops to smartphones.
+                    </p>
+
+                    <h2>1. Why Responsiveness Matters</h2>
+                    <p>
+                        More than 60% of web traffic now comes from mobile users. A responsive website
+                        automatically adjusts layout, font size, and elements to create an optimized
+                        user experience.
+                    </p>
+
+                    <blockquote>
+                        “Good design is not just what it looks like and feels like. Design is how it works.” — Steve
+                        Jobs
+                    </blockquote>
+
+                    <h2>2. Key Principles of Responsive Design</h2>
+                    <ul>
+                        <li>Use flexible grid layouts</li>
+                        <li>Optimize images for faster load times</li>
+                        <li>Use relative units like % and rem</li>
+                        <li>Test across multiple devices</li>
+                    </ul>
+
+                    <p>
+                        By implementing these principles, you can make your website adaptable and
+                        ready for all screen sizes.
+                    </p>
+
+                    <h2>3. Tools You Can Use</h2>
+                    <p>
+                        Popular tools for building responsive sites include <strong>Figma</strong>,
+                        <strong>Bootstrap</strong>, and <strong>Tailwind CSS</strong>.
+                        These frameworks speed up development and maintain consistent styling.
+                    </p>
                 </div>
 
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <img src="img/misssion.jpg" alt="Blog 4">
-                    </div>
-                    <div class="blog-content">
-                        <h3 class="blog-title">App Design Principles You Should Know</h3>
-                        <p class="blog-excerpt">Craft intuitive and engaging app experiences for your users.</p>
-                        <a href="/blog-inner/first.html" class="btn-readmore">Read More →</a>
-                    </div>
-                </div>
-
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <img src="img/about-page.jpg" alt="Blog 5">
-                    </div>
-                    <div class="blog-content">
-                        <h3 class="blog-title">The Future of AI in Web Development</h3>
-                        <p class="blog-excerpt">AI is revolutionizing web development — here’s how you can benefit.</p>
-                        <a href="/blog-inner/first.html" class="btn-readmore">Read More →</a>
-                    </div>
-                </div>
-
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <img src="img/misssion.jpg" alt="Blog 6">
-                    </div>
-                    <div class="blog-content">
-                        <h3 class="blog-title">UI/UX Trends Dominating 2025</h3>
-                        <p class="blog-excerpt">Design trends that will define the next generation of digital
-                            experiences.</p>
-                        <a href="/blog-inner/first.html" class="btn-readmore">Read More →</a>
-                    </div>
-                </div>
-
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <img src="img/about-page.jpg" alt="Blog 7">
-                    </div>
-                    <div class="blog-content">
-                        <h3 class="blog-title">Improving Performance with Modern Tools</h3>
-                        <p class="blog-excerpt">Enhance your site speed and reliability using the latest dev tools.</p>
-                        <a href="/blog-inner/first.html" class="btn-readmore">Read More →</a>
-                    </div>
-                </div>
-
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <img src="img/misssion.jpg" alt="Blog 8">
-                    </div>
-                    <div class="blog-content">
-                        <h3 class="blog-title">Best Practices for Secure Web Apps</h3>
-                        <p class="blog-excerpt">Keep your web applications safe with these essential security tips.</p>
-                        <a href="/blog-inner/first.html" class="btn-readmore">Read More →</a>
-                    </div>
-                </div>
-
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <img src="img/about-page.jpg" alt="Blog 9">
-                    </div>
-                    <div class="blog-content">
-                        <h3 class="blog-title">The Power of Branding in Digital Space</h3>
-                        <p class="blog-excerpt">Create a strong brand identity that connects and converts.</p>
-                        <a href="/blog-inner/first.html" class="btn-readmore">Read More →</a>
+                <!-- 🔗 Share Buttons -->
+                <div class="share-section">
+                    <p>Share this post:</p>
+                    <div class="share-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
 
             </div>
         </section>
 
+        <!-- 🧩 Related Posts -->
+        <section class="related-posts">
+            <h2>Related Posts</h2>
+            <div class="related-grid">
+                <div class="related-card">
+                    <img src="/img/misssion.jpg" alt="">
+                    <h3>Top 5 SEO Strategies for 2025</h3>
+                    <a href="#">Read More →</a>
+                </div>
 
+                <div class="related-card">
+                    <img src="/img/misssion.jpg" alt="">
+                    <h3>Why Businesses Need Custom Software</h3>
+                    <a href="#">Read More →</a>
+                </div>
 
-
-
-
-
+                <div class="related-card">
+                    <img src="/img/misssion.jpg" alt="">
+                    <h3>App Design Principles You Should Know</h3>
+                    <a href="#">Read More →</a>
+                </div>
+            </div>
+        </section>
         <footer class="main-footer">
             <div class="footer-about">
                 <h4>About Us</h4>
@@ -414,17 +437,17 @@
         document.getElementById("year").textContent = year;
     </script>
 
-    <script src="./ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://unpkg.com/lenis@1.1.4/dist/lenis.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
-    <script src="./ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <script src="./ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script src="../ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="../ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
-    <script src="./assets/js/vendors/cursor.js"></script>
+    <script src="../assets/js/vendors/cursor.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
-    <script src="./assets/js/common.js"></script>
-    <script src="./assets/js/app.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/app.js"></script>
 </body>
 
 </html>

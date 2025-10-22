@@ -1518,7 +1518,9 @@ svg.svg-convert.svg-converted {
     padding: 30px 20px;
   }
 
-
+.highlight  {
+      font-size: 48px;
+    }
 
 
 }
@@ -1552,10 +1554,14 @@ svg.svg-convert.svg-converted {
   }
 
   .cta-long-txt {
-    font-size: 1rem;
+    font-size: 16px;
   }
 
   .faq-head-txt {
     font-size: 2.5rem;
+
+    
   }
 }
+
+
