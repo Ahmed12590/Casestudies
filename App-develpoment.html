@@ -9,17 +9,18 @@
     <link rel="stylesheet" href="./assets/css/bootstrap.css" />
     <link rel="stylesheet" href="./assets/css/common.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/services-page.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="img/logo.png">
-    <title>About us </title>
+    <title>App Development </title>
+
 </head>
 
 <body>
-<!-- 🔝 Back to Top Button -->
-<button id="backToTop" class="back-to-top">
-  ↑
-</button>
-
+    <!-- 🔝 Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        ↑
+    </button>
 
     <div class="flair"></div>
     <header class="portfolio-header">
@@ -131,107 +132,29 @@
     <main>
 
 
-        <section class="about-banner">
-            <div class="about-overlay"></div>
-            <div class="about-content">
-                <h1>About <span>Us</span></h1>
-            </div>
-        </section>
-        <section class="cta">
-            <div class="container-fluid">
-                <div class="cta-inner">
+        <!-- ✅ App Main Hero Section -->
+        <section class="app-main-wrapper">
+            <div class="app-container">
+                <!-- 🎞️ Left Lottie Animation -->
+                <div class="app-lottie">
+                    <dotlottie-wc src="https://lottie.host/91edef4f-73d2-42cf-a3a9-3b0d89472790/QR1tkyLMPT.lottie"
+                        style="width: 500px;height: 500px" autoplay loop></dotlottie-wc>
+                </div>
 
-                    <!-- Left Image -->
-                    <div class="cta-image">
-                        <img src="img/about-page.jpg" alt="CTA Mockup" />
-                    </div>
-
-                    <!-- Right Text -->
-                    <div class="cta-txt-wrapper">
-                        <h2 class="cta-head-txt">
-
-                            <span class="highlight">About Us</span>
-                        </h2>
-                        <p class="cta-long-txt">
-                            We create custom software that empowers brands to grow and succeed.
-                            With a focus on innovation and performance, we deliver technology that works.
-                            Partner with us to transform your digital vision into reality.
-                        </p>
-                        <button class="btn-cta">Get Started</button>
-                    </div>
-
+                <!-- 📝 Right Text Content -->
+                <div class="app-text">
+                    <h1>Mobile App Development</h1>
+                    <p>
+                        Transform your ideas into engaging, high-performance mobile apps designed to
+                        deliver an exceptional user experience across iOS and Android platforms.
+                    </p>
+                    <a href="/contact.html" class="btn-primary">Get a Quote →</a>
                 </div>
             </div>
         </section>
 
-
-        <section class="cta">
-            <div class="container-fluid">
-                <div class="cta-inner">
-                    <!-- Right Text -->
-                    <div class="cta-txt-wrapper">
-                        <h2 class="cta-head-txt">
-
-                            <span class="highlight">Our Mission </span>
-                        </h2>
-                        <p class="cta-long-txt">
-                            To deliver innovative, scalable, and user-focused digital
-                            solutions that make a lasting impact.
-                        </p>
-                        <button class="btn-cta">Get Started</button>
-                    </div>
-                    <!-- Left Image -->
-                    <div class="cta-image">
-                        <img src="img/misssion.jpg" alt="CTA Mockup" />
-                    </div>
-
-
-
-                </div>
-            </div>
-        </section>
-
-
-        <section class="team-section">
-            <div class="team-header">
-                <h2>Meet Our Expert Team</h2>
-                <p>Passionate professionals driving innovation and delivering excellence.</p>
-            </div>
-
-            <div class="team-grid">
-                <div class="team-card">
-                    <div class="team-img">
-                        <img src="img/team.jpg" alt="Software Developer">
-                    </div>
-                    <h3>Software Developer</h3>
-                    <p class="team-name">Ahmed </p>
-                </div>
-
-                <div class="team-card">
-                    <div class="team-img">
-                        <img src="img/team.jpg" alt="App Developer">
-                    </div>
-                    <h3>App Developer</h3>
-                    <p class="team-name">Sarah Malik</p>
-                </div>
-
-                <div class="team-card">
-                    <div class="team-img">
-                        <img src="img/team.jpg" alt="Web Developer">
-                    </div>
-                    <h3>Web Developer</h3>
-                    <p class="team-name">Ali Raza</p>
-                </div>
-
-                <div class="team-card">
-                    <div class="team-img">
-                        <img src="img/team.jpg" alt="SEO Executive">
-                    </div>
-                    <h3>SEO Executive</h3>
-                    <p class="team-name">Salsabeel </p>
-                </div>
-            </div>
-        </section>
+        <!-- Lottie Script -->
+        <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.5/dist/dotlottie-wc.js" type="module"></script>
 
 
         <section class="contact-section">
@@ -271,6 +194,9 @@
                 </form>
             </div>
         </section>
+
+
+
 
 
 
@@ -333,10 +259,13 @@
     <div class="offer-badge" onclick="window.location.href='contact.html'">
         <span>60% Off On All Services</span>
     </div>
+
     <script>
         const year = new Date().getFullYear();
         document.getElementById("year").textContent = year;
     </script>
+
+
 
     <script src="./ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://unpkg.com/lenis@1.1.4/dist/lenis.min.js"></script>

@@ -1,0 +1,118 @@
+.app-main-wrapper {
+  background-image: url(/img/main-back.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 100px 9%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* ❤️ Gradient Overlay using your theme colors */
+.app-main-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(249, 4, 4, 0.75),   /* var(--primary) */
+    rgba(194, 17, 17, 0.75), /* var(--btn-dark) */
+    rgba(169, 13, 13, 0.75)  /* var(--btn-darker) */
+  );
+  background-size: 200% 200%;
+  animation: gradientFlow 6s ease infinite;
+  z-index: 0;
+  transition: all 0.3s ease;
+}
+
+/* ✨ Smooth Gradient Animation */
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ✅ Ensure content is above overlay */
+.app-main-wrapper > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+
+.app-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+
+
+.app-text {
+    max-width: 550px;
+}
+
+.app-text h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.app-text p {
+    font-size: 1rem;
+    color: var(--white);
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: var(--primary);
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: var(--primary);
+    color: #fff;
+}
+
+/* 📱 Responsive */
+@media (max-width: 992px) {
+    .app-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .app-lottie dotlottie-wc {
+        width: 320px;
+        height: 320px;
+    }
+
+    .app-text h1 {
+        font-size: 60px;
+    }
+
+    .app-text p {
+        font-size: 18px;
+    }
+}
