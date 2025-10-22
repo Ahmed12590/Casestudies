@@ -306,8 +306,8 @@
 
 .btn-read {
   display: inline-block;
-  background: #fff;
-  color: #d90429;
+  background:var(--primary);
+  color:var(--white);
   padding: 10px 18px;
   border-radius: 30px;
   text-decoration: none;
@@ -316,8 +316,8 @@
 }
 
 .btn-read:hover {
-  background: #000;
-  color: #fff;
+  background: var(--primary) ;
+  color: var(--white) ;
 }
 
 /* 🌐 Responsive Layout */
@@ -807,6 +807,7 @@ svg.svg-convert.svg-converted {
   /* background-size: cover;
   background-position: center;
   background-repeat: no-repeat; */
+  
 }
 
 .footer-about h4 {
