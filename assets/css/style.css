@@ -263,11 +263,12 @@
 }
 
 /* 🔴 Service Card */
+
 .service-card {
   background-color: var(--egg-white);
   border-radius: 15px;
   border: solid;
-  border-color: var(--primary);
+  border-color: var(--highlihgt);
   height: 350px;
   display: flex;
   align-items: flex-end;
@@ -276,9 +277,11 @@
   overflow: hidden;
 }
 
+
+
 .service-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); */
 }
 
 .service-content {
@@ -889,7 +892,7 @@ svg.svg-convert.svg-converted {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: min(90%, 1400px); 
+  width: min(90%, 1400px);
   height: 1px;
   background-color: var(--black);
 }
@@ -1059,37 +1062,72 @@ svg.svg-convert.svg-converted {
 
 
 /* ------------------------------------------------- contact page css --------------------------------------------- */
+
 .contact-section {
   position: relative;
-  background: url('../../img/mobile-mockup.jpg') center/cover no-repeat;
+  background-color: var(--egg-white);
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 60px 20px;
-  color: #fff;
+  color: #000000;
   overflow: hidden;
 }
 
-.contact-overlay {
+/* ✨ Animated Gradient Border */
+.contact-container::before {
+  content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 2px;
+  /* ✅ Border thickness */
+  background: linear-gradient(90deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+  background-size: 300% 300%;
+  animation: borderFlow 4s linear infinite;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
 }
 
+
+@keyframes borderFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+/* Overlay removed */
+.contact-overlay {
+  display: none;
+}
+
+/* 🪟 Contact Form Container */
 .contact-container {
   position: relative;
   max-width: 850px;
   width: 100%;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   padding: 40px;
   z-index: 2;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Header */
 .contact-header {
   text-align: center;
   margin-bottom: 30px;
@@ -1098,12 +1136,12 @@ svg.svg-convert.svg-converted {
 .contact-header h2 {
   font-size: 2rem;
   margin-bottom: 10px;
-  background: linear-gradient(90deg, #facc15, #f97316, #ef4444);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--black);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
+/* Form Fields */
 .contact-form .form-group {
   display: flex;
   flex-wrap: wrap;
@@ -1116,15 +1154,21 @@ svg.svg-convert.svg-converted {
 .contact-form textarea {
   flex: 1;
   padding: 15px;
-  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  background: #ffffff;
+  color: #000000;
   outline: none;
   font-size: 1rem;
   width: 100%;
+  transition: border 0.3s ease;
 }
 
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: var(--primary);
+}
 
 .contact-form select {
   appearance: none;
@@ -1138,15 +1182,16 @@ svg.svg-convert.svg-converted {
 }
 
 .contact-form input::placeholder,
-.contact-form textarea::placeholder,
-.contact-form select {
-  color: rgba(255, 255, 255, 0.7);
+.contact-form textarea::placeholder {
+  color: #777777;
+  /* ✅ Dark gray placeholder */
 }
 
+/* Submit Button */
 .btn-send {
   margin-top: 25px;
   width: 100%;
-  background: var(--primary);
+  background: var(--btn-dark);
   border: none;
   border-radius: 10px;
   color: #fff;
@@ -1162,7 +1207,7 @@ svg.svg-convert.svg-converted {
   transform: translateY(-3px);
 }
 
-/* Responsive */
+/* 📱 Responsive */
 @media (max-width: 768px) {
   .contact-form .form-group {
     flex-direction: column;
