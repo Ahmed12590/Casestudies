@@ -306,8 +306,8 @@
 
 .btn-read {
   display: inline-block;
-  background:var(--primary);
-  color:var(--white);
+  background: var(--primary);
+  color: var(--white);
   padding: 10px 18px;
   border-radius: 30px;
   text-decoration: none;
@@ -316,8 +316,8 @@
 }
 
 .btn-read:hover {
-  background: var(--primary) ;
-  color: var(--white) ;
+  background: var(--primary);
+  color: var(--white);
 }
 
 /* 🌐 Responsive Layout */
@@ -694,6 +694,7 @@ svg.svg-convert.svg-converted {
 
 /*-------------------------------------------------cta--------------------------------------------------------*/
 
+
 .cta {
   margin: 0 1rem;
   border-radius: 4.375rem;
@@ -802,12 +803,7 @@ svg.svg-convert.svg-converted {
   justify-content: space-between;
   margin: 0 auto;
   padding: 100px 60px 100px 60px;
-  background-color: var(--bg-pirmary);
-  /* background-image: url("../../img/footer.bg"); */
-  /* background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; */
-  
+  background-color: var(--highlihgt);
 }
 
 .footer-about h4 {
@@ -827,12 +823,9 @@ svg.svg-convert.svg-converted {
 .footer-quick-link li {
   list-style: none;
   font-size: 20px;
-}
-
-.footer-quick-link li:hover {
-  color: white;
   cursor: pointer;
 }
+
 
 .footer-social {
   display: flex;
@@ -853,14 +846,11 @@ svg.svg-convert.svg-converted {
 
 .footer-social i {
   font-size: 24px;
-  color: rgb(0, 0, 0);
+  color: var(--black);
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
-.footer-social i:hover {
-  color: rgb(255, 255, 255);
-}
 
 
 .footer-contact h4 {
@@ -877,7 +867,7 @@ svg.svg-convert.svg-converted {
 
 .footer-contact i {
   font-size: 20px;
-  color: var(--primary);
+  color: var(--black);
 }
 
 .footer-bottom {
@@ -885,23 +875,32 @@ svg.svg-convert.svg-converted {
   margin: 0;
   padding: 20px 40px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
   color: rgb(0, 0, 0);
-  background-color: var(--primary);
+  background-color: var(--highlihgt);
+  position: relative;
+  text-align: center;
+}
+
+.footer-bottom::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(90%, 1400px); 
+  height: 1px;
+  background-color: var(--black);
 }
 
 .footer-bottom p {
   font-size: 16px;
   margin: 0;
-  color: var(--egg-white);
+  color: var(--black);
 }
 
-.footer-bottom p a {
-  text-decoration: none;
-  color: #A88BEB;
-}
+
 
 
 /* ----------------------------------------------- footer end ---------------------------------------------------- */
