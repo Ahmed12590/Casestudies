@@ -1,4 +1,31 @@
-/* 💥 Fixed Offer Badge */
+/* 🔝 Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  background: var(--btn-darker);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+  /* hidden by default */
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.back-to-top:hover {
+  transform: translateY(-5px);
+  background-color: var(--black);
+}
+
+
 .offer-badge {
   position: fixed;
   top: 50%;
@@ -217,9 +244,10 @@
   background-color: var(--white);
 }
 
+
 .btn-secondary:hover {
-  background: #fff;
   color: var(--primary);
+  background-color: var(--white);
 }
 
 /* 📱 Responsive */
@@ -331,6 +359,20 @@
 }
 
 @media (max-width: 600px) {
+
+
+  .service-wrapper {
+    background-size: 320px auto;
+    /* 🔹 make image smaller */
+    background-position: center top 30px;
+    /* adjust spacing if needed */
+    padding: 40px 5%;
+    /* less padding for mobile */
+    margin-top: 50px;
+    /* reduce top margin */
+  }
+
+
   .service-grid {
     grid-template-columns: 1fr;
   }
@@ -1091,7 +1133,10 @@ svg.svg-convert.svg-converted {
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
+  pointer-events: none;
+  z-index: 1;
 }
+
 
 
 @keyframes borderFlow {
@@ -1368,6 +1413,9 @@ svg.svg-convert.svg-converted {
   }
 
   /* Tabs */
+
+
+
   .tab-wrapper {
     flex-wrap: wrap;
     gap: 0.75rem;
@@ -1379,8 +1427,11 @@ svg.svg-convert.svg-converted {
   }
 
   .tab-head {
-    font-size: 3rem;
-    padding: 3rem 0;
+    background-size: 320px auto;
+    background-position: center top 30px;
+    padding: 40px 5%;
+    margin-top: 50px;
+
   }
 
   /* Case Studies (1 by 1 grid) */
@@ -1461,21 +1512,15 @@ svg.svg-convert.svg-converted {
 
   .main-footer {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+
+    text-align: start;
     gap: 20px;
     padding: 30px 20px;
   }
 
-  .footer-contact p {
-    justify-content: center;
-  }
 
-  .footer-social {
 
-    justify-content: center;
-    gap: 20px;
-  }
+
 }
 
 /* ---------- Small Mobile (max-width: 480px) ---------- */
