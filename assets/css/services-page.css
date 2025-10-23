@@ -1,50 +1,54 @@
 .app-main-wrapper {
-  background-image: url(/img/main-back.jpg);
-  background-size: cover;
-  background-position: center;
-  padding: 100px 9%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
+    background-image: url(/img/main-back.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 100px 9%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 
-/* ❤️ Gradient Overlay using your theme colors */
+
 .app-main-wrapper::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(249, 4, 4, 0.75),   /* var(--primary) */
-    rgba(194, 17, 17, 0.75), /* var(--btn-dark) */
-    rgba(169, 13, 13, 0.75)  /* var(--btn-darker) */
-  );
-  background-size: 200% 200%;
-  animation: gradientFlow 6s ease infinite;
-  z-index: 0;
-  transition: all 0.3s ease;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(249, 4, 4, 0.75),
+            /* var(--primary) */
+            rgba(194, 17, 17, 0.75),
+            /* var(--btn-dark) */
+            rgba(169, 13, 13, 0.75)
+            /* var(--btn-darker) */
+        );
+    background-size: 200% 200%;
+    animation: gradientFlow 6s ease infinite;
+    z-index: 0;
+    transition: all 0.3s ease;
 }
 
 /* ✨ Smooth Gradient Animation */
 @keyframes gradientFlow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* ✅ Ensure content is above overlay */
-.app-main-wrapper > * {
-  position: relative;
-  z-index: 1;
+.app-main-wrapper>* {
+    position: relative;
+    z-index: 1;
 }
 
 

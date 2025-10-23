@@ -72,6 +72,92 @@
   }
 }
 
+/* ------------------------------------------ header -------------------------------------------------- */
+
+/* 🔽 Dropdown Base */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 200px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 100;
+  top: 100%;
+  left: 0;
+}
+
+/* Dropdown items */
+.dropdown-content li {
+  list-style: none;
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 10px 16px;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.dropdown-content li a:hover {
+  background: var(--btn-dark);
+  color: #fff;
+}
+
+/* 🔥 Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+/* 🧠 Responsive tweak */
+@media (max-width: 768px) {
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .dropdown-content li a {
+    color: #fff;
+    padding-left: 30px;
+  }
+}
+
+/* -------------------------------- mobile drop down ------------------------------- */
+
+
+.has-dropdown {
+  position: relative;
+}
+
+.mobile-dropdown {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 20px;
+  margin-top: 8px;
+}
+
+.mobile-dropdown li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.mobile-dropdown li a:hover {
+  color: var(--btn-dark);
+}
+
+
 
 
 
@@ -1518,9 +1604,9 @@ svg.svg-convert.svg-converted {
     padding: 30px 20px;
   }
 
-.highlight  {
-      font-size: 36px;
-    }
+  .highlight {
+    font-size: 36px;
+  }
 
 
 }
@@ -1560,8 +1646,6 @@ svg.svg-convert.svg-converted {
   .faq-head-txt {
     font-size: 2.5rem;
 
-    
+
   }
 }
-
-
