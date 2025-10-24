@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="./assets/css/bootstrap.css" />
     <link rel="stylesheet" href="./assets/css/common.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/services-page.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="img/logo.png">
-    <title>Contact us </title>
+    <title>Social Media Marketing</title>
+
 </head>
 
 <body>
-
     <!-- 🔝 Back to Top Button -->
     <button id="backToTop" class="back-to-top">
         ↑
@@ -142,16 +143,65 @@
             </ul>
         </nav>
     </header>
-
     <main>
 
 
-        <section class="about-banner">
-            <div class="about-overlay"></div>
-            <div class="about-content">
-                <h1>Contact <span>Us</span></h1>
+        <!-- App Main Hero Section -->
+        <section class="app-main-wrapper">
+            <div class="app-container">
+                <!-- 🎞️ Left Lottie Animation -->
+                <div class="app-lottie">
+                    <dotlottie-wc src="https://lottie.host/f03098b3-6523-4c64-9586-8a5d0d6861df/9MJwNRvffi.lottie"
+                        style="width: 400px;height: 400px" autoplay loop></dotlottie-wc>
+                </div>
+
+                <!-- Right Text Content -->
+                <div class="app-text">
+                    <h1>Socail Media Marketing</h1>
+                    <p>
+                        Transform your ideas into engaging, high-performance mobile apps designed to
+                        deliver an exceptional user experience across iOS and Android platforms.
+                    </p>
+                    <a href="/contact.html" class="btn-primary">Get a Quote →</a>
+                </div>
             </div>
         </section>
+
+        <!-- Lottie Script -->
+        <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.5/dist/dotlottie-wc.js" type="module"></script>
+
+
+        <section class="app-about-wrapper">
+            <div class="app-txt">
+                <h2>CMS Development </h2>
+                <p>We create powerful and easy-to-manage websites using leading CMS platforms like WordPress, Shopify,
+                    and Wix.<br>
+                    Our CMS development approach focuses on flexibility, speed, and SEO-readiness — helping you easily
+                    manage your website content, products, and pages without technical hassle.
+                    Whether it’s a business site, online store, or portfolio, we make it effortless for you to update
+                    and scale.</p>
+            </div>
+            <div class="app-image">
+                <img src="img/mobile-mockup.jpg" alt="">
+            </div>
+        </section>
+
+
+        <section class="app-about-wrapper">
+            <div class="app-image">
+                <img src="img/mobile-mockup.jpg" alt="">
+            </div>
+            <div class="app-txt">
+                <h2>Custom Web Development </h2>
+                <p>We create custom websites and web apps using modern frameworks like React.js, Next.js, and
+                    Vue.js.<br>
+                    Our backend expertise in Node.js, PHP, and Laravel ensures your site runs fast, secure, and scalable
+                    — built exactly for your business needs.</p>
+            </div>
+
+        </section>
+
+
 
 
 
@@ -193,54 +243,6 @@
             </div>
         </section>
 
-
-
-        <section class="map-wrapper">
-            <div class="map-content">
-                <!-- Left Side Contact Info -->
-                <div class="contact-info">
-
-                    <div class="info-box">
-                        <i class="fa-solid fa-phone"></i>
-                        <div class="info-text">
-                            <h4>Phone</h4>
-                            <p><a href="tel:+15551234567">+1 555-123-4567</a></p>
-                        </div>
-                    </div>
-
-                    <div class="info-box">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <div class="info-text">
-                            <h4>Our Location</h4>
-                            <p>
-                                <a href="https://www.google.com/maps/place/1600+Amphitheatre+Parkway,+Mountain+View,+CA,+USA"
-                                    target="_blank">
-                                    1600 Amphitheatre Parkway, Mountain View, CA, USA
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="info-box">
-                        <i class="fa-solid fa-envelope"></i>
-                        <div class="info-text">
-                            <h4>Email</h4>
-                            <p><a href="mailto:info@techcompany.com">info@techcompany.com</a></p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Right Side Google Map -->
-                <div class="right-map">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.123456789!2d-122.084249!3d37.422065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb24c2f1e6c4b%3A0x5b73a9f62f8e21a!2sGoogleplex!5e0!3m2!1sen!2sus!4v1705643424321"
-                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-            </div>
-        </section>
 
 
 
@@ -310,6 +312,8 @@
         const year = new Date().getFullYear();
         document.getElementById("year").textContent = year;
     </script>
+
+
 
     <script src="./ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://unpkg.com/lenis@1.1.4/dist/lenis.min.js"></script>

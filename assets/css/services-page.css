@@ -149,16 +149,6 @@
     position: relative;
 }
 
-.app-txt h2::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    width: 60px;
-    height: 4px;
-    background: linear-gradient(90deg, #f90404, #c21111, #a90d0d);
-    border-radius: 10px;
-}
 
 .app-txt p {
     font-size: 1.1rem;
@@ -194,10 +184,7 @@
         padding: 60px 6%;
     }
 
-    .app-txt h2::after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
+
 
     .app-txt {
         max-width: 100%;
@@ -211,11 +198,11 @@
 
 @media (max-width: 576px) {
     .app-txt h2 {
-        font-size: 2rem;
+        font-size: 30px;
     }
 
     .app-txt p {
-        font-size: 1rem;
+        font-size: 16px;
     }
 
     .app-image img {

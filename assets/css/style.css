@@ -89,6 +89,7 @@
   z-index: 100;
   top: 100%;
   left: 0;
+  text-align: start;
 }
 
 /* Dropdown items */
@@ -140,7 +141,7 @@
 .mobile-dropdown {
   display: none;
   flex-direction: column;
-  gap: 10px;
+  /* gap: 10px; */
   padding-left: 20px;
   margin-top: 8px;
 }
@@ -148,12 +149,16 @@
 .mobile-dropdown li a {
   color: #fff;
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 1.95rem;
   transition: color 0.3s ease;
 }
 
 .mobile-dropdown li a:hover {
   color: var(--btn-dark);
+}
+
+.mobile-dropdown.show {
+  display: flex;
 }
 
 
@@ -1384,12 +1389,104 @@ svg.svg-convert.svg-converted {
   transform: translateY(-3px);
 }
 
+.map-wrapper {
+  background: #f8f8f8;
+  padding: 60px 20px;
+}
+
+.map-content {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  flex: 1 1 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+}
+
+.info-box {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.info-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.info-box i {
+  font-size: 24px;
+  color: var(--primary, #007bff);
+  margin-right: 15px;
+}
+
+.info-text h4 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #222;
+}
+
+.info-text a {
+  text-decoration: none;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.info-text a:hover {
+  color: var(--primary, #007bff);
+}
+
+.info-text p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Map Area */
+.right-map {
+  flex: 1 1 600px;
+  height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+
 /* 📱 Responsive */
 @media (max-width: 768px) {
   .contact-form .form-group {
     flex-direction: column;
   }
+
+  .map-content {
+    flex-direction: column;
+  }
+
+  .right-map {
+    height: 300px;
+  }
 }
+
+
+
+
+
+
+
+
 
 
 

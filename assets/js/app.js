@@ -214,11 +214,13 @@ const redirectBlocker = setInterval(() => {
     }
   });
 
-  // Smooth scroll to top
-  backToTop.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  });
+ // ===== Mobile Dropdown Toggle =====
+const dropdownToggle = document.querySelector(".dropdown-toggle");
+const mobileDropdown = document.querySelector(".mobile-dropdown");
+
+dropdownToggle.addEventListener("click", (e) => {
+  e.preventDefault(); // stop link click
+  mobileDropdown.classList.toggle("show");
+});
+
 
