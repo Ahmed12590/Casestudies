@@ -338,15 +338,16 @@
 /* 📱 Responsive */
 @media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 2.2rem;
+    font-size: 39px;
   }
 
   .hero-content p {
-    font-size: 1rem;
+    font-size: 30px;
   }
 
   .hero-btns {
-    flex-direction: column;
+    /* flex-direction: column; */
+    font-size: 15px;
   }
 }
 
@@ -440,6 +441,14 @@
 @media (max-width: 992px) {
   .service-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-content h3 {
+    font-size: 28px;
+  }
+
+  .service-content p {
+    font-size: 18px;
   }
 }
 
@@ -811,7 +820,7 @@ p.s-font {
   width: 100%;
   border-radius: 3.125rem;
   padding: 5rem 3.75rem;
-  background: var(--egg-white);
+  /* background: var(--egg-white); */
 }
 
 .tes-txt-wrapper img {
@@ -916,6 +925,15 @@ svg.svg-convert.svg-converted {
   .cta-txt-wrapper {
     align-items: center;
     text-align: center;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .cta-txt-wrapper p {
+    padding: 0;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 30px;
   }
 
   .cta-image img {
@@ -1038,26 +1056,35 @@ svg.svg-convert.svg-converted {
 
 
 /* ----------------------------------------------- about page css ------------------------------------------------- */
+
 .about-banner {
   position: relative;
   width: 100%;
   height: 80vh;
-  background-image: url("../../img/main-back.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  color: #fff;
   overflow: hidden;
-  ;
+
+  /* 🖼️ Background image with dark overlay */
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../../img/main-back.jpg") center center/cover no-repeat;
+  background-attachment: fixed;
 }
 
-/* Dark overlay */
-.about-banner .about-overlay {
+/* 🌈 Animated gradient overlay (SAME as hero-banner) */
+.about-banner::before {
+  content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: linear-gradient(135deg,
+      rgba(79, 70, 229, 0.2),
+      rgba(147, 51, 234, 0.2),
+      rgba(236, 72, 153, 0.2));
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
   z-index: 1;
 }
 
@@ -1087,8 +1114,13 @@ svg.svg-convert.svg-converted {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .about-banner {
+    width: 100%;
+    height: 50vh;
+  }
+
   .about-content h1 {
-    font-size: 2.5rem;
+    font-size: 44px;
   }
 }
 
@@ -1104,9 +1136,7 @@ svg.svg-convert.svg-converted {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 10px;
-  background: linear-gradient(90deg, #4f46e5, #9333ea, #ec4899);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--black);
 }
 
 .team-header p {
@@ -1170,6 +1200,23 @@ svg.svg-convert.svg-converted {
   .team-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .team-header h2 {
+    font-size: 40px;
+  }
+
+  .team-header p {
+    font-size: 20px;
+  }
+
+  .team-card h3 {
+    font-size: 20px;
+  }
+
+  .team-name {
+    font-size: 20px;
+  }
+
 }
 
 @media (max-width: 600px) {
