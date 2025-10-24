@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -9,6 +9,8 @@
 
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="../../../npm/swiper%408/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+
     <style>
         .loader-first {
             position: fixed;
@@ -60,47 +62,59 @@
     <link href="../../../assets/css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="../../../assets/css/common.css" rel="stylesheet" type="text/css">
     <link href="../../../assets/css/custom.min.css" rel="stylesheet" type="text/css">
+
 </head>
 
 <body class="no-home">
-
+ <!-- 🔝 Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        ↑
+    </button>
+    
     <header class="portfolio-header">
         <div class="header-wrapper">
             <nav class="main-header">
                 <ul class="d-flex align-items-center justify-content-center gap-4">
                     <li class="nav-link">
-                        <a href="#">
-                            <img src="../../../img/logo.png" alt="site logo" class="site-logo" />
+                        <a href="/index.html">
+                            <img src="/img/logo.png" alt="site logo" class="site-logo" />
                         </a>
                     </li>
 
                     <li class="nav-link">
-                        <a href="/bbGlobal/case-studies.html"> Home </a>
+                        <a href="/index.html"> Home </a>
                     </li>
 
                     <li class="nav-link">
-                        <a href="#"> Services </a>
+                        <a href="/About.html"> About </a>
+                    </li>
+
+                    <!-- Services Dropdown -->
+                    <li class="nav-link dropdown">
+                        <a href="/Services.html" class="dropbtn">Services ▾</a>
+                        <ul class="dropdown-content">
+                            <li><a href="/web-designing.html">Web Development</a></li>
+                            <li><a href="/App-develpoment.html">App Development</a></li>
+                            <li><a href="/Marketing.html">Marketing</a></li>
+                            <li><a href="/Seo.html">Seo</a></li>
+                        </ul>
                     </li>
 
                     <li class="nav-link">
-                        <a href="#"> Portfolio </a>
+                        <a href="/Portfolio.html"> Portfolio </a>
                     </li>
 
                     <li class="nav-link">
-                        <a href="#"> About </a>
+                        <a href="/Blog.html"> Blogs </a>
                     </li>
 
                     <li class="nav-link">
-                        <a href="#"> Blogs </a>
+                        <a href="/Contact.html"> Contact </a>
                     </li>
 
                     <li class="nav-link">
-                        <a href="#"> Contact </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="#">
-                            <button class="btn-bbGlobal">Get Started</button>
+                        <a href="Contact.html">
+                            <button class="btn-bbGlobal">Let’s Talk</button>
                         </a>
                     </li>
                 </ul>
@@ -112,8 +126,8 @@
         <nav class="mobile-nav">
             <ul class="d-flex align-items-center justify-content-between">
                 <li class="nav-link">
-                    <a href="#">
-                        <img src="../../../img/logo.png" alt="site logo" class="site-logo" />
+                    <a href="/index.html">
+                        <img src="/img/logo.png" alt="site logo" class="site-logo" />
                     </a>
                 </li>
 
@@ -139,27 +153,34 @@
         <nav class="mob-inner d-flex flex-direction align-items-center justify-content-start gap-5">
             <ul>
                 <li class="nav-link">
-                    <a href="#"> Home </a>
+                    <a href="/index.html"> Home </a>
                 </li>
 
                 <li class="nav-link">
-                    <a href="#"> Services </a>
+                    <a href="/About.html"> About </a>
+                </li>
+
+                <!-- Services Dropdown -->
+                <li class="nav-link has-dropdown">
+                    <a href="Services.html" class="dropdown-toggle">Services</a>
+                    <ul class="mobile-dropdown">
+                        <li><a href="/web-designing.html">Web Development</a></li>
+                        <li><a href="/App-develpoment.html">App Development</a></li>
+                        <li><a href="/Marketing.html">Marketing</a></li>
+                        <li><a href="/Seo.html">Seo</a></li>
+                    </ul>
                 </li>
 
                 <li class="nav-link">
-                    <a href="#"> Portfolio </a>
+                    <a href="/Portfolio.html"> Portfolio </a>
                 </li>
 
                 <li class="nav-link">
-                    <a href="#"> About </a>
+                    <a href="/Blog.html"> Blogs </a>
                 </li>
 
                 <li class="nav-link">
-                    <a href="#"> Blogs </a>
-                </li>
-
-                <li class="nav-link">
-                    <a href="#"> Contact </a>
+                    <a href="/Contact.html"> Contact </a>
                 </li>
 
                 <li class="nav-link">
@@ -384,6 +405,7 @@
     <script src="../../../assets/js/custom.js"></script>
     <script src="../../../assets/js/vendors/intersection-observer.js"></script>
     <script src="../../../assets/js/common.js"></script>
+    <script src="../../../assets/js/app.js"></script>
 </body>
 
 </html>

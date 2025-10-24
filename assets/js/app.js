@@ -203,18 +203,8 @@ const redirectBlocker = setInterval(() => {
 
 
 
-  const backToTop = document.getElementById("backToTop");
 
-  // Show button when scrolling down
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      backToTop.style.display = "flex";
-    } else {
-      backToTop.style.display = "none";
-    }
-  });
-
- // ===== Mobile Dropdown Toggle =====
+// ===== Mobile Dropdown Toggle =====
 const dropdownToggle = document.querySelector(".dropdown-toggle");
 const mobileDropdown = document.querySelector(".mobile-dropdown");
 
@@ -224,3 +214,16 @@ dropdownToggle.addEventListener("click", (e) => {
 });
 
 
+
+
+
+const backToTop = document.getElementById("backToTop");
+
+// Show button when scrolling down
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    backToTop.style.display = "flex";
+  } else {
+    backToTop.style.display = "none";
+  }
+});
