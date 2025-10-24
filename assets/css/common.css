@@ -13,21 +13,21 @@
 }
 
 @font-face {
-  font-family: bbGlobal Sans Regular;
+  font-family: elevencoders Sans Regular;
   src: url("../../font/Montserrat/static/Montserrat-Regular.ttf");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: bbGlobal Sans Medium;
+  font-family: elevencoders Sans Medium;
   src: url("../../font/Montserrat/static/Montserrat-Medium.ttf");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: bbGlobal Sans SemiBold;
+  font-family: elevencoders Sans SemiBold;
   src: url("../../font/Montserrat/static/Montserrat-SemiBold.ttf");
   font-weight: 600;
   font-style: normal;
@@ -207,7 +207,7 @@ ul {
 }
 
 .main-header {
-  font-family: bbGlobal Sans Medium, sans-serif;
+  font-family: elevencoders Sans Medium, sans-serif;
   position: fixed;
   top: 1.875rem;
   /* 30px */
@@ -346,7 +346,7 @@ a:hover {
   padding: 0 1rem;
   /* 16px */
   background: var(--black);
-  font-family: bbGlobal Sans Medium, sans-serif;
+  font-family: elevencoders Medium, sans-serif;
   font-size: 4rem;
   /* 64px */
   line-height: 4.375rem;
