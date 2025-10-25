@@ -212,7 +212,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: bbGlobal Sans SemiBold, sans-serif;
+  font-family: elevencoders Sans SemiBold, sans-serif;
   line-height: 8.125rem;
   /* 130px */
   font-size: 7.5rem;
@@ -221,7 +221,7 @@
 }
 
 .portfolio-punch {
-  font-family: bbGlobal Sans SemiBold, sans-serif;
+  font-family: elevencoders Sans SemiBold, sans-serif;
   margin: 0 1rem;
   /* 16px */
   height: 95dvh;
@@ -249,7 +249,7 @@
 }
 
 .hero-txt-p {
-  font-family: bbGlobal Sans Medium, sans-serif;
+  font-family: elevencoders Medium, sans-serif;
   transform-style: preserve-3d;
   perspective: 1000px;
   font-size: 1.5rem;
@@ -537,7 +537,7 @@
 }
 
 .fall-box span {
-  font-family: bbGlobal Sans Medium, sans-serif;
+  font-family: elevencoders Sans Medium, sans-serif;
   border-radius: 1.5625rem;
   /* 25px */
   padding: 0.875rem 1.5rem;
@@ -582,7 +582,7 @@
 
 
 .hero-txt-h1 {
-  font-family: bbGlobal Sans SemiBold, sans-serif;
+  font-family: elevencoders Sans SemiBold, sans-serif;
   transform-style: preserve-3d;
   perspective: 1000px;
   font-size: 7.5rem;
@@ -590,7 +590,7 @@
 }
 
 .hero-txt-p {
-  font-family: bbGlobal Sans Medium, sans-serif;
+  font-family: elevencoders Sans Medium, sans-serif;
   transform-style: preserve-3d;
   perspective: 1000px;
   font-size: 1.5rem;
@@ -648,7 +648,7 @@
 }
 
 .btn-tabs {
-  font-family: bbGlobal Sans Medium, sans-serif;
+  font-family: elevencoders Sans Medium, sans-serif;
   padding: 0.875rem 1.5rem;
   /* 14px 24px */
   font-size: 1.375rem;
@@ -700,7 +700,7 @@
   text-align: center;
   padding: 5rem 0;
   /* 80px 0 */
-  font-family: bbGlobal Sans Medium, sans-serif;
+  font-family: elevencoders Sans Medium, sans-serif;
 }
 
 .animated-porfolio-wrapper {
@@ -762,7 +762,7 @@
 }
 
 .case-studies__card-wrapper--card-content {
-  font-family: bbGlobal Sans SemiBold, sans-serif;
+  font-family: elevencoders Sans SemiBold, sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -913,20 +913,20 @@ svg.svg-convert.svg-converted {
 }
 
 .cta-head-txt {
-  font-family: bbGlobal Sans SemiBold, sans-serif;
+  font-family: elevencoders Sans SemiBold, sans-serif;
   font-size: 3.375rem;
   line-height: 1.2;
 }
 
 .cta-long-txt {
-  font-family: bbGlobal Sans Medium, sans-serif;
+  font-family: elevencoders Sans Medium, sans-serif;
   font-size: 1.25rem;
   line-height: 1.8rem;
   opacity: 0.9;
 }
 
 .btn-cta {
-  font-family: bbGlobal Sans Medium, sans-serif;
+  font-family: elevencoders Sans Medium, sans-serif;
   background: var(--primary);
   color: var(--white);
   border-radius: 4.375rem;
