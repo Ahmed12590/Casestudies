@@ -999,11 +999,13 @@ svg.svg-convert.svg-converted {
 .footer-about p {
   font-size: 16px;
   line-height: 1.5;
+  font-family: elevencoders Sans Medium;
 }
 
 .quick-links h4 {
-  font-size: 30px;
+  font-size: 27px;
   padding-bottom: 10px;
+  font-family: elevencoders Sans SemiBold;
 }
 
 .footer-quick-link li {
@@ -1040,7 +1042,8 @@ svg.svg-convert.svg-converted {
 
 
 .footer-contact h4 {
-  font-size: 30px;
+  font-size: 27px;
+  font-family: elevencoders Sans SemiBold;
 }
 
 .footer-contact p {
@@ -1049,6 +1052,7 @@ svg.svg-convert.svg-converted {
   gap: 10px;
   font-size: 18px;
   margin-top: 10px;
+  font-family: elevencoders Sans Medium;
 }
 
 .footer-contact i {
