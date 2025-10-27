@@ -370,17 +370,21 @@
 /* 📱 Responsive */
 @media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 39px;
+    font-size: 30px;
   }
 
   .hero-content p {
-    font-size: 30px;
+    font-size: 20px;
   }
 
   .hero-btns {
     /* flex-direction: column; */
     font-size: 15px;
   }
+  .btn-primary,
+.btn-secondary {
+  font-size: 12px;
+}
 }
 
 
