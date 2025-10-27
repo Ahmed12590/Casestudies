@@ -9,7 +9,7 @@
 - [Features](#features)  
 - [Project Structure](#project-structure)  
 - [Technologies Used](#technologies-used)  
-- [Installation / Setup](#installation--setup)  
+- [Installation / Setup](#installation--setup) 
 - [How to Use / Run](#how-to-use--run)  
 - [Contributing](#contributing)  
 - [License](#license)  

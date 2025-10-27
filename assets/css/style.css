@@ -381,10 +381,11 @@
     /* flex-direction: column; */
     font-size: 15px;
   }
+
   .btn-primary,
-.btn-secondary {
-  font-size: 12px;
-}
+  .btn-secondary {
+    font-size: 12px;
+  }
 }
 
 
