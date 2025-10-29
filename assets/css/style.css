@@ -512,6 +512,10 @@
   .service-card {
     height: 300px;
   }
+
+  .service-content img {
+    width: 60px;
+}
 }
 
 
