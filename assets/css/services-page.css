@@ -207,6 +207,119 @@
     }
 }
 
+/* ------------------------ seo price plan --------------------------------- */
+
+
+.seo-packages {
+    background: var(--white);
+    padding: 60px 20px;
+    font-family: "Poppins", sans-serif;
+}
+
+.seo-packages .container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-family: elevencoders Sans SemiBold;
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: var(--text);
+}
+
+.section-header p {
+    color: #666;
+    font-size: 16px;
+}
+
+.plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.plan-box {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.plan-box h3 {
+    color: var(--primary);
+    font-family: elevencoders Sans Medium;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.plan-box .sub {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.plan-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.plan-box ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    color: var(--text);
+    font-size: 15px;
+}
+
+
+
+.full-plan {
+    margin-top: 40px;
+    background: var(--white);
+    border-left: 5px solid var(--primary);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.full-plan h3 {
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.full-plan p {
+    color: #555;
+    margin: 0;
+}
+
+
+
+
+/* ------------------------ seo page end --------------------- */
+
+
+
+
+
+
+
 
 
 /* 🌟 Testimonial Section */
