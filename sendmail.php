@@ -18,18 +18,19 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $mail = new PHPMailer(true);
 
     try {
-        // SMTP setup
+       
+        
         $mail->isSMTP();
         $mail->Host       = 'smtp.yourdomain.com';  // <-- apne hosting ka SMTP server likho
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'info@yourdomain.com';  // <-- apna domain email
-        $mail->Password   = 'YOUR_EMAIL_PASSWORD';  // <-- us email ka password
+        $mail->Username   = 'info@yourdomain.com';  
+        $mail->Password   = 'YOUR_EMAIL_PASSWORD';  
         $mail->SMTPSecure = 'tls';
-        $mail->Port       = 587; // or 465 if SSL
+        $mail->Port       = 587; 
 
         //  Sender & Receiver
-        $mail->setFrom('info@yourdomain.com', 'Elevencoders'); // Sender email
-        $mail->addAddress('info@yourdomain.com', 'Admin');     // Receiver email
+        $mail->setFrom('info@yourdomain.com', 'Elevencoders'); 
+        $mail->addAddress('info@yourdomain.com', 'Admin');     
         $mail->addReplyTo($email, "$first_name $last_name");
 
         // Email content
